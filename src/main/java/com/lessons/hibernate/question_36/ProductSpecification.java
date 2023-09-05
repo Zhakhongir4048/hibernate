@@ -12,4 +12,8 @@ public class ProductSpecification {
         return (root, query, criteriaBuilder) -> criteriaBuilder.greaterThan(root.get("salary"), salary);
     }
 
+    public static Specification<Product> salaryLessThan(Integer salary) {
+        return (root, query, criteriaBuilder) -> criteriaBuilder.lessThan(root.get("salary"), salary);
+    }
+
 }

@@ -14,8 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-import static com.lessons.hibernate.question_36.ProductSpecification.equalsName;
-import static com.lessons.hibernate.question_36.ProductSpecification.salaryGreaterThan;
+import static com.lessons.hibernate.question_36.ProductSpecification.*;
 
 @Slf4j
 @Service
@@ -40,17 +39,20 @@ public class Question36Test {
         Predicate name = builder.equal(root.get("name"), "Sony");
         Predicate age = builder.equal(root.get("age"), 100);
         query.where(builder.and(name, age));
-        List<Product> resultList = entityManager.createQuery(query.select(root)).getResultList();
-        List<Product> productList = productJpaRepository.findAll(equalsName("Apple").or(
-                salaryGreaterThan(4900000)));
+        List<Product> productListCustom = entityManager.createQuery(query.select(root)).getResultList();
+        List<Product> productListWithSpecificationExample1 = productJpaRepository.findAll(equalsName("Apple")
+                .or(salaryGreaterThan(4900000)));
+        List<Product> productListWithSpecificationExample2 = productJpaRepository.findAll(equalsName("Test")
+                .or(salaryLessThan(3000000)));
         log.info("""
                                 
                 ************************************************************
                 Starting Question36Test
-                resultList = {}
-                productList = {}
+                productListCustom = {}
+                productListWithSpecificationExample1 = {}
+                productListWithSpecificationExample2 = {}
                 ************************************************************
-                """, resultList, productList);
+                """, productListCustom, productListWithSpecificationExample1, productListWithSpecificationExample2);
         productJpaRepository.deleteAll();
     }
 
