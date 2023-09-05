@@ -11,6 +11,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
+@Table(name = "animal_question_35")
 public class Animal {
 
     @Id
