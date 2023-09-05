@@ -61,6 +61,7 @@ public class Question35Test {
                 namedQueryFromQuery.getResultList(),
                 namedQueryFromTypedQuery.getResultList(),
                 queryResultSubclassCat.getResultList());
+        animalJpaRepository.deleteAll();
     }
 
     private void saveAllAnimals() {

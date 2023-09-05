@@ -8,4 +8,8 @@ public class ProductSpecification {
         return (root, query, criteriaBuilder) -> criteriaBuilder.equal(root.get("name"), name);
     }
 
+    public static Specification<Product> salaryGreaterThan(Integer salary) {
+        return (root, query, criteriaBuilder) -> criteriaBuilder.greaterThan(root.get("salary"), salary);
+    }
+
 }

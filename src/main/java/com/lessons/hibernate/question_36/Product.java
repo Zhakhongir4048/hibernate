@@ -24,6 +24,6 @@ public class Product {
     private Integer salary;
 
     @Column(name = "age")
-    private Byte age;
+    private Short age;
 
 }
