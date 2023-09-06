@@ -25,6 +25,14 @@ public class ClientService {
         clientJpaRepository.saveAll(create2000Clients());
     }
 
+    public List<Client> findByFullNameContaining(String name){
+        return clientJpaRepository.findByFullNameContaining(name);
+    }
+
+    public List<Client> findByMobileNumberContaining(String mobileNumber){
+        return clientJpaRepository.findByMobileNumberContaining(mobileNumber);
+    }
+
     public List<Client> create2000Clients() {
         List<Client> clients = new ArrayList<>();
         Faker faker = new Faker();

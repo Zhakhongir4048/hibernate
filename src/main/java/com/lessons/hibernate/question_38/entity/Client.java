@@ -14,6 +14,7 @@ import java.util.List;
 @ToString
 @Table(name = "clients_question_38")
 @Entity
+@NamedEntityGraph(name = "client_entity-graph", attributeNodes = @NamedAttributeNode("emailAddresses"))
 public class Client {
 
     @Id
