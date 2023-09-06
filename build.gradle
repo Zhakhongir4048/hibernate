@@ -28,6 +28,7 @@ dependencies {
     compileOnly 'org.hibernate:hibernate-jpamodelgen:6.1.7.Final'
     runtimeOnly 'org.postgresql:postgresql'
     annotationProcessor 'org.projectlombok:lombok'
+    implementation 'com.github.javafaker:javafaker:1.0.2'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
