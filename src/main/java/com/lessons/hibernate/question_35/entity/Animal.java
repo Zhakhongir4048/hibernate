@@ -1,4 +1,4 @@
-package com.lessons.hibernate.question_35;
+package com.lessons.hibernate.question_35.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;

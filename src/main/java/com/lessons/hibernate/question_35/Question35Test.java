@@ -1,5 +1,10 @@
 package com.lessons.hibernate.question_35;
 
+import com.lessons.hibernate.question_35.dao.AnimalJpaRepository;
+import com.lessons.hibernate.question_35.entity.Animal;
+import com.lessons.hibernate.question_35.entity.Cat;
+import com.lessons.hibernate.question_35.entity.Dog;
+import com.lessons.hibernate.question_35.entity.Person;
 import jakarta.annotation.PostConstruct;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
