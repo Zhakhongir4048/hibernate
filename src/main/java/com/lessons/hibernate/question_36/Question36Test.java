@@ -1,5 +1,7 @@
 package com.lessons.hibernate.question_36;
 
+import com.lessons.hibernate.question_36.dao.ProductJpaRepository;
+import com.lessons.hibernate.question_36.entity.Product;
 import jakarta.annotation.PostConstruct;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -14,7 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-import static com.lessons.hibernate.question_36.ProductSpecification.*;
+import static com.lessons.hibernate.question_36.specification.ProductSpecification.*;
 
 @Slf4j
 @Service

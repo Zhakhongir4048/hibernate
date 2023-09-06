@@ -1,5 +1,7 @@
-package com.lessons.hibernate.question_36;
+package com.lessons.hibernate.question_36.specification;
 
+import com.lessons.hibernate.question_36.entity.Product;
+import com.lessons.hibernate.question_36.entity.Product_;
 import org.springframework.data.jpa.domain.Specification;
 
 public class ProductSpecification {
